@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: ubuntu-pod
+  namespace: nicolas-gomez
+spec:
+  containers:
+  - name: ubuntu
+    image: ubuntu
+    command: ["sh", "-c", "apt-get update && apt-get install -y curl && curl http://nombre-del-servicio:puerto"]
